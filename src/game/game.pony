@@ -1,6 +1,9 @@
 use "../bearlibterminal"
 
-actor Game
-  var term: Terminal val = Terminal
-  new create(blt: Terminal val) =>
-    term = blt
+class Game
+  var blt: Terminal val = Terminal
+  new create(term: Terminal val) =>
+    blt = term
+  fun take_input() =>
+    blt.read()
+    blt.close()

@@ -6,5 +6,5 @@ actor Main
   let blt: Terminal val = Terminal
   new create(env: Env) =>
     let renderer: Renderer = Renderer(blt)
-    blt.read()
-    blt.close()
+    let gamer: Game = Game(blt)
+    gamer.take_input()
