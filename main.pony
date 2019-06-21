@@ -17,6 +17,8 @@ actor Main
       key = gamer.take_input()
       if key == blt.tk_escape then
         loop = false
+      else
+        player.move(key)
       end
     end
     blt.close()
