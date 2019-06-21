@@ -7,4 +7,8 @@ actor Main
   new create(env: Env) =>
     let renderer: Renderer = Renderer(blt)
     let gamer: Game = Game(blt)
-    gamer.take_input()
+    var loop: Bool = true
+    while loop == true do
+      gamer.take_input()
+    end
+    blt.close()
