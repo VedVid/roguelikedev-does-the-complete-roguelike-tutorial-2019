@@ -7,8 +7,12 @@ actor Main
   new create(env: Env) =>
     let renderer: Renderer = Renderer(blt)
     let gamer: Game = Game(blt)
+    var key: I32 = 0
     var loop: Bool = true
     while loop == true do
-      gamer.take_input()
+      key = gamer.take_input()
+      if key > 0 then
+        loop = false
+      end
     end
     blt.close()
